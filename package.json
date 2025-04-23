@@ -1,0 +1,38 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is React ",
+  "keywords": [
+    "react",
+    "Learning",
+    "Project"
+  ],
+  "homepage": "https://github.com/Sparsh004/React#readme",
+  "bugs": {
+    "url": "https://github.com/Sparsh004/React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparsh004/React.git"
+  },
+  "license": "ISC",
+  "author": "Sparsh Mishra",
+  "type": "commonjs",
+  "default": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist":[
+    "Last 2 chrome version",
+    "Last 2 firefox version"
+  ]
+}
