@@ -15,3 +15,31 @@ Code Splitting
 Differential Bundling - support older Browsers
 HTTPs
 Tree Shaking - remove unused code
+
+# Food Ordering App
+
+\*
+
+- Header
+- -Logo
+- -Nav Items
+- Body
+- - search
+- - Restaurant Container
+- - Restaurant card
+-     -img
+-     - Name of res, cuisine
+-
+- Footer
+- -copyright
+- -links
+- -address
+- -contact
+- *\
+
+# React Hooks
+(Normal JS utility function)
+-useState() - generate state variable
+-useEffect()
+
+

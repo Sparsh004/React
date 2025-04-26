@@ -22,7 +22,7 @@
 .res-card {
   /* flex-wrap: wrap; */
   padding: 5px;
-  width: 200px;
+  width: 230px;
 
   margin: 5px;
 }
@@ -45,4 +45,18 @@
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+}
+
+.filter-btn {
+  display:flex;
+  justify-content:center;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  width:250px
+}
+
+.filter{
+  display:flex;
+  justify-content:center;
 }
