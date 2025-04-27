@@ -60,3 +60,16 @@
   display:flex;
   justify-content:center;
 }
+
+.shimmer-conatainer{
+  display:flex;
+
+}
+
+.shimmer-card{
+  width:200px;
+  height:400px;
+  background-color:f0f0f0;
+  margin:20px
+
+}
