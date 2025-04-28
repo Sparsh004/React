@@ -1811,5 +1811,5 @@ let resList2 = [
   },
 ]
 
-export default resList2;
+export default resList;
 
