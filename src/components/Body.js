@@ -1,8 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
+import resList3 from "../utils/mockData";
 import ListOfRestaurant from "../utils/mockData";
 import {useState,useEffect} from "react";
 import Shimmer from "./Shimmer"
+import {Link} from "react-router-dom";
 
 // const Body = () => {
 //   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -78,8 +79,8 @@ const Body = ()=>{
 
 
 //  Local state Variable
-const [ListOfRestaurants,setListOfRestaurants] = useState(resList);
-const [filteredRestaurant,setFilteredRestaurant] = useState(resList);
+const [ListOfRestaurants,setListOfRestaurants] = useState(resList3);
+const [filteredRestaurant,setFilteredRestaurant] = useState(resList3);
 
 const [searchText,setSearchText] = useState("");
 
@@ -90,28 +91,28 @@ useEffect(()=>{
   fetchData();
   
  
-}, []);
+});
 
 const fetchData = async()=>{
   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 
   const json = await data.json();
 
-  console.log(json);
+  console.log(json.data);
 
   // setListOfRestaurants(
-  //   json?.restaurants?.info
+  //   json?.data?.cards[1].card.card.gridElements.infoWithStyle.restaurants[0]
   // )
   
 
 };
 
-if(ListOfRestaurants.length ===0){
-  return <Shimmer/>
-}
+// if(ListOfRestaurants.length ===0){
+//   return <Shimmer/>
+// }
 
 
-
+// const {restaurants} = ListOfRestaurants
 
 // the rendered will be printed first because its a part of the body and the body is rendered before the useEffect
 console.log("rendered ");
@@ -125,7 +126,7 @@ console.log("rendered ");
                 className="search-box"
                 value={searchText} 
                 onChange={(e)=>{
-                  setSearchText(e.target.value);
+                  setSearchText(e.target.value); //this is to update the local state variable 
                 }}/>
                 <button onClick={()=>{
                   // filter the restaurant cards and update the UI
@@ -150,7 +151,10 @@ console.log("rendered ");
               >Top Rated Restaurants</button>
             </div>
              <div className ="res-container" >{
-                   ListOfRestaurants.map(res=> (<RestaurantCard key= {res.info?.id} resData={res}/>)) 
+                   ListOfRestaurants.map((res)=> (
+                   <Link 
+                   key= {res.info?.id}
+                   to ={"/restaurants/"+res.info.id}><RestaurantCard  resData={res}/></Link>))
                 } 
 
                 {/* <RestaurantCard resData = {ListOfRestaurant[0]}/>

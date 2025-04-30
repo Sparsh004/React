@@ -42,4 +42,8 @@ Tree Shaking - remove unused code
 -useState() - generate state variable
 -useEffect()
 
+# Types of Routing in WEB apps
+- Client Side Routing => when user request for a route only some components change  but the page is not loaded again
+- Server Side Routing => when user request for a route the whole page loads
+
 
